@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.card-img-top{
+    height: 300px;
+}
+
+.btn{
+    width: 20rem !important;
+}
