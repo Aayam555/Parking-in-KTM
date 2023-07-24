@@ -18,12 +18,11 @@ function showMap(index){
 
 const lists = document.getElementById("lists");
 for (let i = 0; i<PARKINGLIST.length; i++){
-    lists.innerHTML += `<div class="card" style="width: 18rem;">
-    <img src="${PARKINGLIST[i].image}" class="card-img-top" height=300 alt="image">
-    <div class="card-body">
-      <h5 class="card-title">Name: ${PARKINGLIST[i].name}</h5>
+    lists.innerHTML += `<div class="card" onclick="showMap(${i})">
+    <div class="card-body" style="display:flex">
+      <img src="${PARKINGLIST[i].image}" class="card-img-top" height=30 alt="image">
+      <h5 class="card-title">Place: ${PARKINGLIST[i].name}</h5>
       <h5 class="card-title">Price: Rs.${PARKINGLIST[i].price}</h5>
-      <button onclick="showMap(${i})" class="btn btn-primary">View on Map</button>
     </div>
   </div>`
 }
