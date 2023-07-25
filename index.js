@@ -16,14 +16,14 @@ function showMap(index){
     document.getElementById("map").src = PARKINGLIST[index].link;
 }
 
-const lists = document.getElementById("lists");
+const lists = document.getElementById("myUL");
 for (let i = 0; i<PARKINGLIST.length; i++){
-    lists.innerHTML += `<div class="card" onclick="showMap(${i})">
+    lists.innerHTML += `<li><div class="card" onclick="showMap(${i})">
     <div class="card-body" style="display:flex">
       <img src="${PARKINGLIST[i].image}" class="card-img-top" height=30 alt="image">
-      <h5 class="card-title">Place: ${PARKINGLIST[i].name}</h5>
+      <h5 class="card-title place"><a>${PARKINGLIST[i].name}</a></h5>
       <h5 class="card-title">Price: Rs.${PARKINGLIST[i].price}</h5>
     </div>
-  </div>`
+  </div></li>`
 }
 
